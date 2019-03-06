@@ -1,0 +1,182 @@
+Test Cases.
+
+1- No Arguments passed.
+INPUT :-  ./pointersorter
+
+OUTPUT :- 
+Invalid arguments passed.
+Usage: ./pointersorter "<input-string>"
+Surround input in quotes to combine as one argument. Exiting now!
+
+2- Empty String.
+INPUT :-  ./pointersorter ""
+
+OUTPUT :-
+
+
+3- Passing two arguments.
+INPUT :-  ./pointersorter "SYSTEMS" "systems"
+
+OUTPUT :-
+Invalid arguments passed.
+Usage: ./pointersorter "<input-string>"
+Surround input in quotes to combine as one argument. Exiting now!
+
+4- Passing argument surrounded by two double quotes.
+INPUT :-  ./pointersorter ""Systems Programming""
+
+OUTPUT :-
+Invalid arguments passed.
+Usage: ./pointersorter "<input-string>"
+Surround input in quotes to combine as one argument. Exiting now!
+
+5- String with only numbers.
+INPUT :-  ./pointersorter "1 2 3"
+
+OUTPUT :-
+
+
+6- String with all lowercase alphabets.
+INPUT :-  ./pointersorter "a b c d e f g z"
+
+OUTPUT :-
+z
+g
+f
+e
+d
+c
+b
+a
+
+7- String with lowercase and uppercase alphabets combined.
+INPUT :-  ./pointersorter "a B c D e F g Z"
+
+OUTPUT :-
+Z
+F
+D
+B
+g
+e
+c
+a
+
+8- Full sentence containing different words separated by spaces.
+INPUT :-  ./pointersorter "Rutgers is most diverse univeristy in USA"
+
+OUTPUT :-
+USA
+Rutgers
+univeristy
+most
+is
+in
+diverse
+
+9-  Full sentence containing different words separated by various delimiters.
+INPUT :-  ./pointersorter "Rutgers**is\/most<>diverse^^univeristy##in//USA"
+
+OUTPUT :-
+USA
+Rutgers
+univeristy
+most
+is
+in
+diverse
+
+10- Mixture of same word written in different ways using lowercase and upper case.
+INPUT :-  ./pointersorter "JOHN john John jOhn joHN JOhn JOHn"
+
+OUTPUT :-
+JOHN
+JOHn
+JOhn
+John
+jOhn
+joHN
+john
+
+11- Forming whole word entering one alphabet at a time and also checking for both lowercase and uppercase.
+INPUT :-  ./pointersorter "h ha hap happ happy H HA HAP HAPP HAPPY"
+
+OUTPUT :-
+HAPPY
+HAPP
+HAP
+HA
+H
+happy
+happ
+hap
+ha
+h
+
+12- Mixture of numbers and words in single string.
+INPUT :-  ./pointersorter "12345SYSTEMS456systems789"
+
+OUTPUT :-
+SYSTEMS
+systems
+
+13- String with only numbers and delimiters.
+INPUT :-  ./pointersorter "23[]4\23]423]4[\23]4[2\3]4[623]5[23\4]5[23\4]5[\=-=-3453534582-03940"
+
+OUTPUT :-
+
+
+14- String with random inputs. (Mixture of numbers, alphabets and delimiters.)
+INPUT :-  ./pointersorter "DFAF323dasfzFewFWEFa 2q3rE FZfaf#Q@f asfAF #@f dg45@5252# Aasdf 23$%252A DF32r eAFf2 3@#f #1 #R1 1@ adsfAf2t gaads F32f daDSF"
+
+OUTPUT :-
+R
+Q
+FZfaf
+F
+DFAF
+DF
+Aasdf
+A
+t
+rE
+r
+q
+gaads
+f
+f
+f
+f
+eAFf
+dg
+daDSF
+dasfzFewFWEFa
+asfAF
+adsfAf
+
+15- Input Single argument without being surrounded by quotes.
+INPUT :-  ./pointersorter systems123programming
+
+OUTPUT :-
+systems
+programming
+
+16- Input multiple argument without being surrounded by quotes.
+INPUT :-  ./pointersorter systems 123 programming
+
+OUTPUT :-
+Invalid arguments passed.
+Usage: ./pointersorter "<input-string>"
+Surround input in quotes to combine as one argument. Exiting now!
+
+17- Testcase for handling exclamation mark.
+INPUT :-  ./pointersorter "\!happy"
+
+OUTPUT :-
+happy
+
+18- Testcase for handling "\t "(tab).
+INPUT :-  ./pointersorter "\t"
+
+OUTPUT :-
+t
